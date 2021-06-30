@@ -21,7 +21,10 @@ class DigitalTimer extends Component {
         const {timerMin, timerSec} = this.state
         this.setState({disableLimits: true})
         const totalSeconds = timerMin * 60
-        if (totalSeconds % 60 === 0 && timerSec === 0) {
+        if (timerMin === 0 && timerSec === 0) {
+          this.setState({status: false})
+          clearInterval(this.timerId)
+        } else if (totalSeconds % 60 === 0 && timerSec === 0 && timerMin > 0) {
           this.setState(prevState => ({
             timerMin: prevState.timerMin - 1,
             timerSec: 59,
