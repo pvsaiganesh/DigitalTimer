@@ -1,0 +1,24 @@
+/* Write your CSS here */
+.bg {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.timer-bg {
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  height: 100px;
+  width: 100px;
+}
+.btn {
+  font-weight: bold;
+}
